@@ -64,6 +64,10 @@ title = "浙江源满阀门科技有限公司"
     url = "/showcase/"
     weight = 2
   [[menu.main]]
+    name = "产品手册"
+    url = "https://archfeh.xyz/YUANMAN-VALVE.pdf"
+    weight = 3
+  [[menu.main]]
     name = "关于我们"
     url = "/about/"
     weight = 4
