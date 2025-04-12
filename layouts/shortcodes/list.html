@@ -1,0 +1,29 @@
+{{ define "main" }}
+<div class="container mx-auto px-4 py-12">
+  <!-- 列表标题和描述 -->
+  <div class="text-center mb-12">
+    <h1 class="text-4xl font-bold text-gray-800 mb-4">{{ .Title }}</h1>
+    <p class="text-xl text-gray-600 max-w-2xl mx-auto">{{ .Description }}</p>
+  </div>
+
+  <!-- 产品网格 -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+    {{ range .Paginator.Pages }}
+    {{ partial "products/card.html" . }}
+    {{ end }}
+  </div>
+
+  <div class="pt-10">
+    <a href="/YUANMAN-VALVE.pdf">
+      <button class="w-80 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-md transition-colors">
+        下载产品手册
+      </button>
+    </a>
+  </div>
+
+  <!-- 分页导航 -->
+  <div class="mt-16 flex justify-center">
+    {{ template "_internal/pagination.html" . }}
+  </div>
+</div>
+{{ end }}

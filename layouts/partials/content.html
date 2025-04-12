@@ -1,0 +1,37 @@
+<!-- <main id="main" class="w-full max-w-screen-xl mx-auto">
+    <div class="px-6">
+        <div id="content-wrapper" class="min-h-screen w-full sm:max-w-2xl max-w-3xl mx-auto">
+            <div id="content">
+                <div class="flex">
+                    <div class="pb-16 w-full pt-12">
+                        <div class="homepage-content prose w-full max-w-3xl mx-auto mb-6">
+                            {{ .Content }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main> -->
+<main id="main" class="w-full max-w-screen-xl mx-auto">
+    <div class="px-6">
+        {{ with .Params.images }}
+        <div class="mt-12 gallery-grid">
+            <h2 class="text-3xl font-bold mb-8 text-gray-800 border-b pb-4">产品图集</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                {{ range . }}
+                <div
+                    class="group relative rounded-xl overflow-hidden bg-gray-100 hover:shadow-lg transition-all duration-300">
+                    <!-- 大图展示 -->
+                    <img src="{{ . }}" alt="产品展示图"
+                        class="w-full h-full md:h-full object-contain group-hover:opacity-95 transition-opacity"
+                        loading="lazy">
+
+                </div>
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+
+    </div>
+</main>

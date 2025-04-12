@@ -1,0 +1,46 @@
+<!-- <nav class="flex justify-between items-center px-6 py-4 bg-white shadow-md">
+    <div class="text-xl font-bold">公司Logo</div>
+    <ul class="flex space-x-4 text-gray-700">
+      <li><a href="/" class="hover:text-black">主页</a></li>
+      <li><a href="/about" class="hover:text-black">关于公司</a></li>
+      <li><a href="/products" class="hover:text-black">产品展示</a></li>
+      <li><a href="/contact" class="hover:text-black">联系我们</a></li>
+    </ul>
+  </nav> -->
+<header id="header">
+    <nav class="bg-white text-black shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <img src="/源满logo.png" / width="4%">
+                    <a href="/" class="text-2xl font-bold hover:text-blue-600 transition-colors">
+                        {{ .Site.Title }}
+                    </a>
+                </div>
+
+                <!-- 桌面导航 -->
+                <div class="hidden md:flex items-center space-x-8">
+                    {{ range .Site.Menus.main }}
+                    <a href="{{ .URL }}" class="hover:text-blue-600 transition-colors">{{ .Name }}</a>
+                    {{ end }}
+                </div>
+
+                <!-- 移动端菜单按钮 -->
+                <button class="md:hidden focus:outline-none" id="mobile-menu-button">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- 移动端菜单 -->
+            <div class="md:hidden hidden pb-4" id="mobile-menu">
+                {{ range .Site.Menus.main }}
+                <a href="{{ .URL }}" class="block py-2 hover:text-industrial-accent transition-colors">{{ .Name }}</a>
+                {{ end }}
+            </div>
+        </div>
+    </nav>
+</header>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html class="bg-blue-800 antialiased">
+{{- partial "head.html" . -}}
+{{- partial "header/navbar.html" . -}}
+
+<body class="bg-white font-sans antialiased">
+  <main class="min-h-screen">
+
+    {{- block "main" . }}{{- end }}
+  </main>
+  {{- partial "footer.html" . -}}
+</body>
+
+</html>

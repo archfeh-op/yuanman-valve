@@ -1,24 +1,22 @@
 {
-  "name": "nocrochet",
+  "private": true,
+  "name": "yuanman-valve",
   "version": "1.0.0",
-  "description": "Nikki O Crochet",
+  "description": "Yuanman Valve official site",
   "main": "postcss.config.js",
-  "dependencies": {
-    "autoprefixer": "^9.8.6",
-    "hugo-theme-demo-builder": "^1.0.7",
-    "postcss-cli": "^7.1.2"
-  },
   "scripts": {
-    "start": "hugo server --bind 0.0.0.0",
-    "build": "hugo-theme-demo-builder"
+    "test": "prettier --check . ",
+    "format": "prettier --write . "
   },
-  "author": "tylerjlawson",
-  "license": "MIT",
-  "browserslist": [
-    "defaults"
-  ],
   "devDependencies": {
-    "prettier": "^2.1.1",
-    "prettier-plugin-go-template": "0.0.11-beta"
+    "@fullhuman/postcss-purgecss": "^6.0.0",
+    "@tailwindcss/typography": "^0.4.1",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
+    "postcss-import": "^16.1.0",
+    "prettier": "^2.2.1",
+    "prettier-plugin-go-template": "0.0.10",
+    "tailwindcss": "^2.2.16"
   }
 }

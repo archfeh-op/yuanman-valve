@@ -1,0 +1,129 @@
+{{ define "main" }}
+<div class="bg-gray-50">
+  <!-- 英雄横幅 -->
+  <div class="relative bg-blue-800 text-white overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-blue-900 to-blue-700 opacity-90"></div>
+    <div class="container mx-auto px-4 py-20 relative z-10">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">{{ .Title }}</h1>
+      <p class="text-xl max-w-3xl">专业阀门制造30年，服务全球500强企业</p>
+    </div>
+  </div>
+
+  <!-- 公司简介 -->
+  <div class="container mx-auto px-4 py-16">
+    <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+      <div class="p-8 md:p-12">
+        <div class="prose max-w-none">
+          {{ .Content }}
+        </div>
+        
+
+
+  <!-- 技术能力 -->
+  <div class="bg-white py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">核心技术参数</h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        {{ range $key, $value := .Params.specs }}
+        <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
+          <h3 class="text-xl font-bold text-blue-800 mb-3">{{ $key }}</h3>
+          <p class="text-gray-700">{{ $value }}</p>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+
+  <!-- 产品系列 -->
+  <div class="bg-gray-50 py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">核心产品系列</h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- 产品卡片 -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+          <div class="h-48 bg-gradient-to-r from-blue-50 to-gray-100 flex items-center justify-center">
+            <svg class="h-20 w-20 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+            </svg>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">球阀系列</h3>
+            <p class="text-gray-600">包括2PC/3PC内螺纹球阀、高低平台法兰球阀等</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+          <div class="h-48 bg-gradient-to-r from-blue-50 to-gray-100 flex items-center justify-center">
+            <svg class="h-20 w-20 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 4v16l16-8L4 4z" />
+            </svg>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">闸阀截止阀</h3>
+            <p class="text-gray-600">内螺纹闸阀、法兰闸阀、截止阀等</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+          <div class="h-48 bg-gradient-to-r from-blue-50 to-gray-100 flex items-center justify-center">
+            <svg class="h-20 w-20 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">特殊阀门</h3>
+            <p class="text-gray-600">Y型过滤器、止回阀及非标定制阀门</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 资质荣誉 -->
+  <div class="bg-white py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">资质认证</h2>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+        <div class="bg-white border border-gray-200 rounded-lg p-6 flex flex-col items-center">
+          <div class="h-16 w-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+            <svg class="h-8 w-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-medium text-center">ISO 9001认证</h3>
+        </div>
+        
+        <div class="bg-white border border-gray-200 rounded-lg p-6 flex flex-col items-center">
+          <div class="h-16 w-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+            <svg class="h-8 w-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-medium text-center">API 6D认证</h3>
+        </div>
+        
+        <div class="bg-white border border-gray-200 rounded-lg p-6 flex flex-col items-center">
+          <div class="h-16 w-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+            <svg class="h-8 w-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-medium text-center">CE认证</h3>
+        </div>
+        
+        <div class="bg-white border border-gray-200 rounded-lg p-6 flex flex-col items-center">
+          <div class="h-16 w-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+            <svg class="h-8 w-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-medium text-center">TS认证</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}
