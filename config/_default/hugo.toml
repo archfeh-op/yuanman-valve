@@ -31,7 +31,6 @@ title = "浙江源满阀门科技有限公司"
     pm = "孔经理"
     phone = "13626589764"
     address = "中国浙江省温州市龙湾区永中街道罗东南街刘宅段77号"
-    email = "sales@valvecompany.com"
     map_lat = "27.882361"  # 纬度
     map_lng = "120.798182" # 经度
     map_title = "源满阀门科技" # 
@@ -49,23 +48,11 @@ title = "浙江源满阀门科技有限公司"
     # Another "title" :-). This one is used as the site_name on the Hugo's internal
     # opengraph structured data template.
     # See https://ogp.me/ and https://gohugo.io/templates/internal#open-graph.
-    title = "Builders Of The Future, Inc."
+    title = "Yuanman Valve CO.,LTD."
 
-    # LICENSE: Hugo Product Launch by Jan Raasch is licensed
-    # under Attribution 4.0 International (CC BY 4.0).
-    # See https://github.com/janraasch/hugo-product-launch#license.
-    # This theme will, by default, inject a design-by-line at the bottom of the page.
-    # **If** you would like to use this theme without attribution,
-    # permissions beyond this license's scope **are available** at
-    # https://github.com/janraasch/hugo-product-launch/blob/master/MORE_PERMISSIONS.md
-    # hidedesignbyline = true
 
     [params.meta]
-        keywords = "yuaman-valve"
-
-[pagination]
-  pagerSize = 6  # 每页显示 10 篇文章
-  path = "page"   # 分页路径格式（如 /posts/page/2/）
+        keywords = "yuaman valve"
 
   [menu]
   [[menu.main]]
