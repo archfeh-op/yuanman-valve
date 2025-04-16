@@ -1,10 +1,9 @@
 <!-- See https://gohugo.io/hugo-pipes/postprocess/#css-purging-with-postcss -->
-{{ $css := resources.Get "css/main.css" }}
-{{ $css = $css | css.PostCSS }}
+{{ $css := resources.Get "css/main.css" | css.PostCSS (dict "config" "postcss.config.js") }}
 {{ if hugo.IsProduction }}
-{{ $css = $css | fingerprint | resources.PostProcess }}
+{{ $css = $css | minify | fingerprint }}
 {{ end }}
-<link href="{{ $css.RelPermalink }}" rel="stylesheet" />
+<link href="{{ $css.RelPermalink }}" rel="stylesheet">
 
 {{ $js := resources.Get "js/main.js" }}
 {{ if hugo.IsProduction }}

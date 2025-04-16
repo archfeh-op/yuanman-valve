@@ -5,9 +5,7 @@ baseURL = "http://yuanman-valve.com"  # 必须带斜杠
 defaultContentLanguage = "zh"
 languageCode = "zh-CN"
 
-# The name of this wonderful theme ;-).
-# theme = "hugo-product-launch"
-
+enableRobotsTXT = true
 # The "title" of your website
 title = "浙江源满阀门科技有限公司"
 
